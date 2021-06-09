@@ -19,7 +19,6 @@
 		D4C0406F26700DAD00387D11 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0406E26700DAD00387D11 /* SearchView.swift */; };
 		D4C040732670686500387D11 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C040722670686500387D11 /* UIViewExtensions.swift */; };
 		D4C040762670717F00387D11 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C040752670717F00387D11 /* BaseViewController.swift */; };
-		D4C0407926710F6000387D11 /* TempModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0407826710F6000387D11 /* TempModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +36,6 @@
 		D4C0406E26700DAD00387D11 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		D4C040722670686500387D11 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		D4C040752670717F00387D11 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		D4C0407826710F6000387D11 /* TempModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				D4C040612670036B00387D11 /* SongModel.swift */,
-				D4C0407826710F6000387D11 /* TempModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -277,7 +274,6 @@
 			files = (
 				D4C040622670036B00387D11 /* SongModel.swift in Sources */,
 				D4C0406F26700DAD00387D11 /* SearchView.swift in Sources */,
-				D4C0407926710F6000387D11 /* TempModel.swift in Sources */,
 				D4C0406B26700D0F00387D11 /* SearchViewController.swift in Sources */,
 				8D82BEA5266FC732002771C2 /* AppDelegate.swift in Sources */,
 				D4C04064267007A800387D11 /* OnBoardingViewController.swift in Sources */,

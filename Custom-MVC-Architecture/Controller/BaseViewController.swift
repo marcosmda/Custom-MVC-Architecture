@@ -9,7 +9,6 @@ import UIKit
 
 class BaseViewController<V: UIView>: UIViewController {
     
-    // Todo
     var mainView: V
     
     init(mainView: V) {

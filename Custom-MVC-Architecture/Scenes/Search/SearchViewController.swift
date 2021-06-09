@@ -20,7 +20,7 @@ class SearchViewController: BaseViewController<SearchView> {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
 }

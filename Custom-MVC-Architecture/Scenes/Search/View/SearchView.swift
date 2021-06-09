@@ -28,6 +28,8 @@ class SearchView: UIView {
     func setUpView() {
         self.backgroundColor = .systemBlue
         addSubviews()
+        setupAllStyles()
+        setupAllConstraints()
     }
     
 }
@@ -45,7 +47,15 @@ extension SearchView {
 extension SearchView {
     
     func setupAllConstraints() {
-
+        setupSearchBarConstraints()
+    }
+    
+    func setupSearchBarConstraints() {
+        let safeArea = self.safeAreaLayoutGuide
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        searchBar.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor).isActive = true
+        searchBar.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 0).isActive = true
+        searchBar.widthAnchor.constraint(equalTo: safeArea.widthAnchor).isActive = true
     }
     
 }
