@@ -6,9 +6,9 @@
 //
 
 import XCTest
-@testable import Custom_MVC_Architecture
+@testable import CustomMVCArchitectureUITests
 
-class Custom_MVC_ArchitectureTests: XCTestCase {
+class CustomMVCArchitectureTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
