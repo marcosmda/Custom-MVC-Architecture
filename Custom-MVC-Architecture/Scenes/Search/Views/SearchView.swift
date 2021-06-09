@@ -9,24 +9,26 @@ import UIKit
 
 class SearchView: UIView {
 
+    //MARK: - Properties
     var searchBar = UISearchBar()
 
+    //MARK: - INIT
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setUpView()
+        setupView()
     }
     
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setUpView()
+        fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Methods
     func addSubviews() {
         addSubview(searchBar)
     }
     
-    func setUpView() {
-        self.backgroundColor = .systemBlue
+    func setupView() {
+        self.backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1)
         addSubviews()
         setupAllStyles()
         setupAllConstraints()
@@ -34,16 +36,20 @@ class SearchView: UIView {
     
 }
 
-// MARK: - SetUp Elements Styles
+// MARK: - Extension: SetUp Elements Styles
 extension SearchView {
     
     func setupAllStyles() {
-        
+        setupSearchBarStyle()
+    }
+    
+    func setupSearchBarStyle(){
+        searchBar.tintColor = UIColor(red: 0, green: 0.95, blue: 0.95, alpha: 1)
     }
     
 }
 
-// MARK: - SetUp Constraints
+// MARK: - Extension: SetUp Constraints
 extension SearchView {
     
     func setupAllConstraints() {

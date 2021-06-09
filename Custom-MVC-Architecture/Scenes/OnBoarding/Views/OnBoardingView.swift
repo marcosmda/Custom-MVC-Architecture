@@ -14,17 +14,16 @@ class OnBoardingView: UIView {
     var finishButton = UIButton()
     
     /// The label where onboarding's text will be presented
-    var onboardingLabel = UILabel()
+    var onBoardingLabel = UILabel()
 
     //MARK: - INIT
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setUpView()
+        setupView()
     }
     
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setUpView()
+        fatalError("init(coder:) has not been implemented")
     }
     
     //MARK: - Methods
@@ -32,11 +31,11 @@ class OnBoardingView: UIView {
     /// Add all subviews created inside the self
     func addSubviews() {
         addSubview(finishButton)
-        addSubview(onboardingLabel)
+        addSubview(onBoardingLabel)
     }
     
     /// Call the setups for all the views, including Constraints and Styles
-    func setUpView() {
+    func setupView() {
         self.backgroundColor = UIColor(red: 1, green: 0.4, blue: 0.35, alpha: 1)
         addSubviews()
         setupAllStyles()
@@ -51,7 +50,7 @@ extension OnBoardingView {
     /// Main Method of extension, used to setup all element styles
     func setupAllStyles() {
         setupFinishButtonStyle()
-        setupOnboardingLabelStyle()
+        setupOnBoardingLabelStyle()
     }
     
     /// Sets the Finish Button style and title
@@ -63,11 +62,11 @@ extension OnBoardingView {
     }
     
     /// Sets the Onboarding Label style and text
-    func setupOnboardingLabelStyle() {
-        onboardingLabel.text = "Bem vindo ao nosso Modelo de Arquitetura, aqui você não vai fazer nada, mas vai ser legal 🤪"
-        onboardingLabel.textAlignment = .center
-        onboardingLabel.textColor = .black
-        onboardingLabel.numberOfLines = .max
+    func setupOnBoardingLabelStyle() {
+        onBoardingLabel.text = "Bem vindo ao nosso Modelo de Arquitetura, aqui você não vai fazer nada, mas vai ser legal 🤪"
+        onBoardingLabel.textAlignment = .center
+        onBoardingLabel.textColor = .black
+        onBoardingLabel.numberOfLines = .max
     }
     
 }
@@ -78,7 +77,7 @@ extension OnBoardingView {
     /// Main Method of extension, used to setup all constraints
     func setupAllConstraints() {
         setupFinishButtonConstraints()
-        setupOnboardingLabelConstraints()
+        setupOnBoardingLabelConstraints()
     }
     
     /// Sets the Finish Button Constraints
@@ -91,12 +90,12 @@ extension OnBoardingView {
     }
     
     /// Sets the Onboarding Label Constraints
-    func setupOnboardingLabelConstraints() {
-        onboardingLabel.translatesAutoresizingMaskIntoConstraints = false
-        onboardingLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        onboardingLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 30).isActive = true
-        onboardingLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
-        onboardingLabel.bottomAnchor.constraint(equalTo: finishButton.topAnchor, constant: 30).isActive = true
+    func setupOnBoardingLabelConstraints() {
+        onBoardingLabel.translatesAutoresizingMaskIntoConstraints = false
+        onBoardingLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        onBoardingLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 30).isActive = true
+        onBoardingLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
+        onBoardingLabel.bottomAnchor.constraint(equalTo: finishButton.topAnchor, constant: 30).isActive = true
     }
     
 }

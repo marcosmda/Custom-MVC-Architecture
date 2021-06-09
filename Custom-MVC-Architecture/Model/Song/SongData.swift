@@ -1,13 +1,20 @@
 //
-//  SongModel.swift
-//  iTunesAPI_MVVM-C
+//  SongData.swift
+//  Custom-MVC-Architecture
 //
-//  Created by Marcos Vinicius Majeveski De Angeli on 07/06/21.
+//  Created by Marcos Vinicius Majeveski De Angeli on 09/06/21.
 //
 
 import Foundation
 
-struct SongModel {
+struct SongResult {
+    
+    let resultCount: Int
+    
+    let results: [SongData]
+}
+
+struct SongData {
     //MARK: - Non Optional Properties
     ///The name of the object returned by the search request.
     ///Values: track, collection, artistFor

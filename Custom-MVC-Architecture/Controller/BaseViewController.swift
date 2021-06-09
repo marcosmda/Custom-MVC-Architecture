@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 /// A BaseViewController class that is used to implement new ViewControllers. It is based on a view that is received at init that is the main container of other subviews.
 class BaseViewController<V: UIView>: UIViewController {
     
@@ -25,9 +24,7 @@ class BaseViewController<V: UIView>: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(mainView)
-        
-        mainView.alignToParentView(view)
+        view = mainView
     }
     
 }
