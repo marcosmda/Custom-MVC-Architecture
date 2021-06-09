@@ -9,10 +9,7 @@ import UIKit
 
 class SearchView: UIView {
 
-    var searchBar: UISearchBar {
-        let searchBar = UISearchBar()
-        return searchBar
-    }
+    var searchBar = UISearchBar()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,10 +21,31 @@ class SearchView: UIView {
         setUpView()
     }
     
+    func addSubviews() {
+        addSubview(searchBar)
+    }
+    
     func setUpView() {
         self.backgroundColor = .systemBlue
+        addSubviews()
+    }
+    
+}
+
+// MARK: - SetUp Elements Styles
+extension SearchView {
+    
+    func setupAllStyles() {
         
-        self.addSubview(searchBar)
+    }
+    
+}
+
+// MARK: - SetUp Constraints
+extension SearchView {
+    
+    func setupAllConstraints() {
+
     }
     
 }

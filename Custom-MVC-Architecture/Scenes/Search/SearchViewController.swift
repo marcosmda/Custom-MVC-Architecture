@@ -7,12 +7,18 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
-
+class SearchViewController: BaseViewController<SearchView> {
+    
+    init() {
+        super.init(mainView: SearchView())
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.view = SearchView()
         
         navigationController?.setNavigationBarHidden(false, animated: true)
     }

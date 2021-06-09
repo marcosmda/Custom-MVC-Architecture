@@ -1,12 +1,11 @@
 //
-//  Custom_MVC_ArchitectureTests.swift
-//  Custom-MVC-ArchitectureTests
+//  CustomMVCArchitectureTests.swift
+//  CustomMVCArchitectureTests
 //
-//  Created by Marcos Vinicius Majeveski De Angeli on 08/06/21.
+//  Created by Frederico Lacis de Carvalho on 09/06/21.
 //
 
 import XCTest
-@testable import CustomMVCArchitectureUITests
 
 class CustomMVCArchitectureTests: XCTestCase {
 
@@ -25,7 +24,7 @@ class CustomMVCArchitectureTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }

@@ -7,16 +7,18 @@
 
 import UIKit
 
-class OnBoardingViewController: UIViewController {
+class OnBoardingViewController: BaseViewController<OnBoardingView> {
     
-    var mainView = OnBoardingView()
-
+    init() {
+        super.init(mainView: OnBoardingView())
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.addSubview(mainView)
-        
-        mainView.alignToParentView(view)
         
         mainView.finishButton.addTarget(self, action: #selector(segueToSearch), for: .touchUpInside)
     }
@@ -24,13 +26,18 @@ class OnBoardingViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        // Hides the navigationBar
         if let navigationController = navigationController {
-            navigationController.setNavigationBarHidden(true, animated: false)
+            navigationController.setNavigationBarHidden(true, animated: true)
         }
     }
     
     @objc private func segueToSearch() {
-        navigationController?.show(SearchViewController(), sender: self)
+        // Removes the OnBoardingViewController from the UINavigationController
+        // and adds the SearchViewController
+        if let navigationController = navigationController {
+            navigationController.setViewControllers([SearchViewController()], animated: true)
+        }
     }
 
 }
