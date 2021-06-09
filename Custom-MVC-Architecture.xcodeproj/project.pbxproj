@@ -19,6 +19,7 @@
 		8D872AFA26715617002F0711 /* SongManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D872AF926715617002F0711 /* SongManager.swift */; };
 		8D872AFC26715778002F0711 /* SongData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D872AFB26715778002F0711 /* SongData.swift */; };
 		8D872AFF26715943002F0711 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D872AFE26715943002F0711 /* Constants.swift */; };
+		8D872B02267160D3002F0711 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D872B01267160D3002F0711 /* UIImageExtensions.swift */; };
 		D4C040622670036B00387D11 /* SongModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C040612670036B00387D11 /* SongModel.swift */; };
 		D4C04064267007A800387D11 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C04063267007A800387D11 /* OnBoardingViewController.swift */; };
 		D4C0406726700CDA00387D11 /* OnBoardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0406626700CDA00387D11 /* OnBoardingModel.swift */; };
@@ -44,6 +45,7 @@
 		8D872AF926715617002F0711 /* SongManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongManager.swift; sourceTree = "<group>"; };
 		8D872AFB26715778002F0711 /* SongData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongData.swift; sourceTree = "<group>"; };
 		8D872AFE26715943002F0711 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8D872B01267160D3002F0711 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		D4C040612670036B00387D11 /* SongModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongModel.swift; sourceTree = "<group>"; };
 		D4C04063267007A800387D11 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		D4C0406626700CDA00387D11 /* OnBoardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingModel.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				D4C040722670686500387D11 /* UIViewExtensions.swift */,
+				8D872B01267160D3002F0711 /* UIImageExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				D4C0406B26700D0F00387D11 /* SearchViewController.swift in Sources */,
 				8D82BEA5266FC732002771C2 /* AppDelegate.swift in Sources */,
 				D4C04064267007A800387D11 /* OnBoardingViewController.swift in Sources */,
+				8D872B02267160D3002F0711 /* UIImageExtensions.swift in Sources */,
 				D4C040762670717F00387D11 /* BaseViewController.swift in Sources */,
 				8D872AED267151F1002F0711 /* PlayerViewComponentView.swift in Sources */,
 				8D872AFC26715778002F0711 /* SongData.swift in Sources */,

@@ -8,7 +8,4 @@
 import Foundation
 
 struct Contants {
-    
-    
-    
 }

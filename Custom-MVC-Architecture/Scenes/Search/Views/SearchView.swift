@@ -44,7 +44,7 @@ extension SearchView {
     }
     
     func setupSearchBarStyle(){
-        searchBar.tintColor = UIColor(red: 0, green: 0.95, blue: 0.95, alpha: 1)
+        searchBar.text = "Blinding+Lights"
     }
     
 }

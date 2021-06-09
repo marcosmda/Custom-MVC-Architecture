@@ -36,7 +36,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     /// A function to setup the initial viewController that must be presented
     /// - Returns: The ViewController that needs to be the first screen for the user
     func getRootViewController() -> UIViewController {
-        return OnBoardingViewController()
+        return SearchViewController()
     }
     
 //MARK: - LifeCycle Methods

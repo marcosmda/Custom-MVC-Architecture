@@ -7,32 +7,37 @@
 
 import Foundation
 
-struct SongResult {
+struct SongResult: Codable {
     
     let resultCount: Int
     
     let results: [SongData]
 }
 
-struct SongData {
-    //MARK: - Non Optional Properties
+struct SongData: Codable {
+    
     ///The name of the object returned by the search request.
     ///Values: track, collection, artistFor
-    let wrapperType: String
+    let wrapperType: String?
     
     ///The kind of content returned by the search request.
     ///Values: book, album, coached-audio, feature-movie, interactive- booklet, music-video, pdf podcast, podcast-episode, software-package, song, tv-episode, artist
-    let kind: String
+    let kind: String?
+    
+    let artistId: Int?
+    
+    let collectionId: Int?
+    
+    let trackId: Int?
     
     ///The name of the artist returned by the search request.
-    let artistName: String
+    let artistName: String?
     
-    ///The name of the track, song, video, TV episode, and so on returned by the search request.
-    let trackName: String
-    
-    //MARK: - Optional Properties
     ///The name of the album, TV season, audiobook, and so on returned by the search request.
     let collectionName: String?
+    
+    ///The name of the track, song, video, TV episode, and so on returned by the search request.
+    let trackName: String?
     
     ///The name of the album, TV season, audiobook, and so on returned by the search request, with objectionable words *’d out. Note: Artist names are never censored.
     let collectionCensoredName: String?
@@ -64,6 +69,9 @@ struct SongData {
     ///The album price at the iTunes Store
     let collectionPrice: Double?
     
+    ///The track price at the iTunes Store
+    let trackPrice: Double?
+    
     ///The date of release of the returned media
     let releaseDate: Date?
     
@@ -75,8 +83,20 @@ struct SongData {
     ///Values: explicit (explicit lyrics, possibly explicit album cover), cleaned (explicit lyrics “bleeped out”), notExplicit (no explicit lyrics)
     let trackExplicitness: String?
     
+    let discCount: Int?
+    
+    let discNumber: Int?
+    
+    let trackCount: Int?
+    
+    let trackNumber: Int?
+    
     ///The returned track’s time in milliseconds.
     let trackTimeMillis: Int?
+    
+    let country: String?
+    
+    let currency: String?
     
     let primaryGenreName: String?
     

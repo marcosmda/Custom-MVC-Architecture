@@ -8,15 +8,23 @@
 import Foundation
 
 struct SongModel {
+    //MARK: - Properties
     
     ///The name of the artist returned by the search request.
-    let artistName: String
+    let artistName: String?
     
     ///The name of the track, song, video, TV episode, and so on returned by the search request.
-    let trackName: String
+    let trackName: String?
     
     ///A URL referencing the 30-second preview file for the content associated with the returned media type.
     let previewUrl: String?
+    
+    ///The name of the album, TV season, audiobook, and so on returned by the search request.
+    let collectionName: String?
+    
+    ///A URL for the artwork associated with the returned media type, sized to 100×100 pixels.
+    let artworkUrl100: String?
+    
+    let primaryGenreName: String?
+
 }
-
-
