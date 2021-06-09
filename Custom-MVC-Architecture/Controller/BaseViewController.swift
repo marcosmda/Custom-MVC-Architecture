@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+/// A BaseViewController class that is used to implement new ViewControllers. It is based on a view that is received at init that is the main container of other subviews.
 class BaseViewController<V: UIView>: UIViewController {
     
     var mainView: V

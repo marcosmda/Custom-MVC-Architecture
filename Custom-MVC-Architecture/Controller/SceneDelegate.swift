@@ -31,10 +31,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.makeKeyAndVisible()
     }
     
+    //MARK: - Custom Methods
+    
+    /// A function to setup the initial viewController that must be presented
+    /// - Returns: The ViewController that needs to be the first screen for the user
     func getRootViewController() -> UIViewController {
         return OnBoardingViewController()
     }
-
+    
+//MARK: - LifeCycle Methods
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
