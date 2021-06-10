@@ -176,7 +176,6 @@
 		D4C040532670023400387D11 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8D872AFE26715943002F0711 /* Constants.swift */,
 				8D872AFD2671592E002F0711 /* Song */,
 			);
 			path = Model;
@@ -245,6 +244,7 @@
 			children = (
 				8D82BEAF266FC734002771C2 /* LaunchScreen.storyboard */,
 				8D82BEAD266FC734002771C2 /* Assets.xcassets */,
+				8D872AFE26715943002F0711 /* Constants.swift */,
 				D4C040712670685500387D11 /* Extensions */,
 				8D872B0026715AE2002F0711 /* Protocols */,
 			);
