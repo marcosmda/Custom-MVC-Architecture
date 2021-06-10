@@ -9,10 +9,10 @@ import UIKit
 
 class SearchView: UIView {
 
-    //MARK: - Properties
     var searchBar = UISearchBar()
-
-    //MARK: - INIT
+    
+    var searchResultTableView = UITableView()
+        
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -21,9 +21,9 @@ class SearchView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    //MARK: - Methods
+
     func addSubviews() {
+        addSubview(searchResultTableView)
         addSubview(searchBar)
     }
     
@@ -36,24 +36,30 @@ class SearchView: UIView {
     
 }
 
-// MARK: - Extension: SetUp Elements Styles
+// MARK: - Extension: Setup Elements Styles
 extension SearchView {
     
     func setupAllStyles() {
         setupSearchBarStyle()
+        setupSearchResultTableViewStyle()
     }
     
     func setupSearchBarStyle(){
-        searchBar.text = "Blinding+Lights"
+        searchBar.placeholder = "Search for a musical term"
+    }
+    
+    func setupSearchResultTableViewStyle() {
+        searchResultTableView.rowHeight = 100
     }
     
 }
 
-// MARK: - Extension: SetUp Constraints
+// MARK: - Extension: Setup Constraints
 extension SearchView {
     
     func setupAllConstraints() {
         setupSearchBarConstraints()
+        setupSearchResultTableView()
     }
     
     func setupSearchBarConstraints() {
@@ -62,6 +68,14 @@ extension SearchView {
         searchBar.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor).isActive = true
         searchBar.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 0).isActive = true
         searchBar.widthAnchor.constraint(equalTo: safeArea.widthAnchor).isActive = true
+    }
+    
+    func setupSearchResultTableView() {
+        searchResultTableView.translatesAutoresizingMaskIntoConstraints = false
+        searchResultTableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor).isActive = true
+        searchResultTableView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        searchResultTableView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        searchResultTableView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
     }
     
 }

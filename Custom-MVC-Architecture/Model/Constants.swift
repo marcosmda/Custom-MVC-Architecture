@@ -5,7 +5,11 @@
 //  Created by Marcos Vinicius Majeveski De Angeli on 09/06/21.
 //
 
-import Foundation
+import CoreGraphics
 
-struct Contants {
+struct Constants {
+    
+    static let padding: CGFloat = 16
+    static let cornerRadius: CGFloat = 8
+    
 }

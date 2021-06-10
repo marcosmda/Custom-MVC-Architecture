@@ -9,14 +9,12 @@ import UIKit
 
 class OnBoardingView: UIView {
     
-    //MARK: - Properties
     /// The Button that closes the onboarrding page
     var finishButton = UIButton()
     
     /// The label where onboarding's text will be presented
     var onBoardingLabel = UILabel()
 
-    //MARK: - INIT
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -25,9 +23,7 @@ class OnBoardingView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    //MARK: - Methods
-    
+        
     /// Add all subviews created inside the self
     func addSubviews() {
         addSubview(finishButton)
@@ -44,7 +40,7 @@ class OnBoardingView: UIView {
     
 }
 
-// MARK: - Extension: SetUp Elements Styles
+// MARK: - Extension: Setup Elements Styles
 extension OnBoardingView {
     
     /// Main Method of extension, used to setup all element styles
@@ -58,7 +54,7 @@ extension OnBoardingView {
         finishButton.setTitle("Fechar OnBoarding", for: .normal)
         finishButton.setTitleColor(.systemGray4, for: .normal)
         finishButton.backgroundColor = .black
-        finishButton.layer.cornerRadius = 16
+        finishButton.layer.cornerRadius = Constants.cornerRadius
     }
     
     /// Sets the Onboarding Label style and text
@@ -71,7 +67,7 @@ extension OnBoardingView {
     
 }
 
-// MARK: - Extension: SetUp Constraints
+// MARK: - Extension: Setup Constraints
 extension OnBoardingView {
     
     /// Main Method of extension, used to setup all constraints
