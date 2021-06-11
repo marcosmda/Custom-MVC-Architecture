@@ -20,6 +20,7 @@
 		8D872AFC26715778002F0711 /* SongData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D872AFB26715778002F0711 /* SongData.swift */; };
 		8D872AFF26715943002F0711 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D872AFE26715943002F0711 /* Constants.swift */; };
 		8D872B02267160D3002F0711 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D872B01267160D3002F0711 /* UIImageExtensions.swift */; };
+		D4905D072672E9C4009BA483 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4905D062672E9C4009BA483 /* TabBarController.swift */; };
 		D4C040622670036B00387D11 /* SongModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C040612670036B00387D11 /* SongModel.swift */; };
 		D4C04064267007A800387D11 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C04063267007A800387D11 /* OnBoardingViewController.swift */; };
 		D4C0406726700CDA00387D11 /* OnBoardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0406626700CDA00387D11 /* OnBoardingModel.swift */; };
@@ -48,6 +49,7 @@
 		8D872AFB26715778002F0711 /* SongData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongData.swift; sourceTree = "<group>"; };
 		8D872AFE26715943002F0711 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8D872B01267160D3002F0711 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		D4905D062672E9C4009BA483 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D4C040612670036B00387D11 /* SongModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongModel.swift; sourceTree = "<group>"; };
 		D4C04063267007A800387D11 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		D4C0406626700CDA00387D11 /* OnBoardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingModel.swift; sourceTree = "<group>"; };
@@ -164,9 +166,18 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		D4905D052672E917009BA483 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D4905D062672E9C4009BA483 /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		D4C040522670022B00387D11 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				D4905D052672E917009BA483 /* TabBar */,
 				D4C0405A267002E400387D11 /* OnBoarding */,
 				D4C040552670027800387D11 /* Search */,
 			);
@@ -376,6 +387,7 @@
 				8D872B02267160D3002F0711 /* UIImageExtensions.swift in Sources */,
 				D4C040762670717F00387D11 /* BaseViewController.swift in Sources */,
 				8D872AED267151F1002F0711 /* PlayerViewComponentView.swift in Sources */,
+				D4905D072672E9C4009BA483 /* TabBarController.swift in Sources */,
 				8D872AFC26715778002F0711 /* SongData.swift in Sources */,
 				D4C0406926700CF300387D11 /* OnBoardingView.swift in Sources */,
 				8D82BEA7266FC732002771C2 /* SceneDelegate.swift in Sources */,

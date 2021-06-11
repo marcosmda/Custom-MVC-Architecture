@@ -36,7 +36,7 @@ class OnBoardingViewController: BaseViewController<OnBoardingView> {
         // Removes the OnBoardingViewController from the UINavigationController
         // and adds the SearchViewController
         if let navigationController = navigationController {
-            navigationController.setViewControllers([SearchViewController()], animated: true)
+            navigationController.setViewControllers([TabBarController()], animated: true)
         }
     }
 
