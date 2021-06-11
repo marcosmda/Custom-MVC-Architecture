@@ -1,16 +1,16 @@
 //
-//  PlayerViewComponent.swift
+//  AboutViewController.swift
 //  Custom-MVC-Architecture
 //
-//  Created by Marcos Vinicius Majeveski De Angeli on 09/06/21.
+//  Created by Frederico Lacis de Carvalho on 10/06/21.
 //
 
 import UIKit
 
-class PlayerViewComponent: BaseViewController<PlayerComponentView> {
+class AboutViewController: BaseViewController<AboutView> {
     
     init() {
-        super.init(mainView: PlayerComponentView())
+        super.init(mainView: AboutView())
     }
     
     required init?(coder: NSCoder) {
@@ -20,6 +20,8 @@ class PlayerViewComponent: BaseViewController<PlayerComponentView> {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        mainView.backgroundColor = .blue
+        
     }
-    
+
 }

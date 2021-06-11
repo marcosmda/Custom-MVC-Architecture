@@ -24,8 +24,15 @@ class TabBarController: UITabBarController {
         searchViewController.title = "Search"
         tabBarIcons.append(UIImage(systemName: "magnifyingglass"))
         
-        setViewControllers([searchViewController], animated: false)
+        // 2º tab
+        let aboutViewController = AboutViewController()
+        aboutViewController.title = "About"
+        tabBarIcons.append(UIImage(systemName: "person.3.fill"))
         
+        setViewControllers([searchViewController, aboutViewController], animated: false)
+        
+        // This part envolves the View portion of this module
+        // Set the icon for each tab
         if let tabBarItems = tabBar.items {
             for (i, item) in tabBarItems.enumerated() {
                 item.image = tabBarIcons[i]

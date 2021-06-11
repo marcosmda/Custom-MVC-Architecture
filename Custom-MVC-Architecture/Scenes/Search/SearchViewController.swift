@@ -91,6 +91,10 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         // Method used to do an action when a cell is clicked
+        let touchedSong = fetchedSongs[indexPath.row]
+        if let navigationController = navigationController {
+            navigationController.present(PreviewPlayerViewController(songInfo: touchedSong), animated: true)
+        }
     }
     
 }
