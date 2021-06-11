@@ -16,9 +16,13 @@ class SearchViewController: BaseViewController<SearchView> {
     var fetchedSongs: [SongModel] = [] {
         didSet {
             // Whenever new songs are fetched, update the tableView
-            mainView.searchResultTableView.reloadData()
+            DispatchQueue.main.async {
+                self.mainView.searchResultTableView.reloadData()
+            }
         }
     }
+    
+    var lastTypedTimer: Timer?
     
     init() {
         super.init(mainView: SearchView())
@@ -64,11 +68,18 @@ extension SearchViewController: SongManagerDelegate {
 // MARK: - Search Bar Delegate Methods
 extension SearchViewController: UISearchBarDelegate {
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        lastTypedTimer?.invalidate()
+        
         if let searchTerm = searchBar.text {
-            songManager.fetchSong(term: searchTerm)
+            lastTypedTimer = Timer.scheduledTimer(withTimeInterval: searchTerm.last == " " ? 0.1 : 1,
+                                                  repeats: false, block: { _ in
+                self.songManager.fetchSong(term: searchTerm)
+            })
         }
     }
+    
 }
 
 // MARK: - Table View Delegate Methods

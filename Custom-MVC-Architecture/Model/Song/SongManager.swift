@@ -13,9 +13,11 @@ protocol SongManagerDelegate {
     func didFailWithError(error: Error)
 }
 
-struct SongManager {
+class SongManager {
     
     var delegate: SongManagerDelegate?
+    
+    var task: URLSessionDataTask?
     
     let baseUrl = "https://itunes.apple.com/search?limit=10&"
     let termBase = "term="
@@ -43,49 +45,34 @@ struct SongManager {
     }
     
     func performRequest(with urlStirng: String) {
+        guard let url = URL(string: urlStirng) else { return }
         
-        if let url = URL(string: urlStirng) {
-            let session = URLSession(configuration: .default)
-            let task = session.dataTask(with: url) { data, _, error in
-                if let safeError = error {
-                    self.delegate?.didFailWithError(error: safeError)
-                    return
-                }
-                if let safeData = data {
-                    if let song = self.parseJSON(safeData) {
-                        DispatchQueue.main.async {
-                            delegate?.didUpdateModel(self, song: song)
-                        }
+        let session = URLSession(configuration: .default)
+        
+        task?.cancel()
+        task = session.dataTask(with: url) { data, _, error in
+            if let safeError = error {
+                self.delegate?.didFailWithError(error: safeError)
+                return
+            }
+            if let safeData = data {
+                if let song = self.parseJSON(safeData) {
+                    DispatchQueue.main.async {
+                        self.delegate?.didUpdateModel(self, song: song)
                     }
                 }
             }
-            task.resume()
         }
-    }
+        task?.resume()
+}
     
     func parseJSON(_ songResult: Data) -> [SongModel]? {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
         do {
             let decodedDataResult = try decoder.decode(SongResult.self, from: songResult)
-            
-            var parsedSongs: [SongModel] = []
-            for decodedData in decodedDataResult.results {
-                
-                //Fill desired properties with the data collected from the request method
-                let artistName = decodedData.artistName
-                let trackName = decodedData.trackName
-                let previewUrl = decodedData.previewUrl
-                let collectionName = decodedData.collectionName
-                let artworkUrl100 = decodedData.artworkUrl100
-                let primaryGenreName = decodedData.primaryGenreName
-                
-                //Create model to be returned
-                let song = SongModel(artistName: artistName, trackName: trackName, previewUrl: previewUrl, collectionName: collectionName, artworkUrl100: artworkUrl100, primaryGenreName: primaryGenreName)
-                
-                parsedSongs.append(song)
-            }
-            return parsedSongs
+                        
+            return decodedDataResult.results.map{ SongModel(songData: $0) }
 
         } catch {
             delegate?.didFailWithError(error: error)

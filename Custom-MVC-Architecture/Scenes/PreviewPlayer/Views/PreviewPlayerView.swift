@@ -89,14 +89,5 @@ extension PreviewPlayerView {
         songArtworkImage.heightAnchor.constraint(equalToConstant: 150).isActive = true
         songArtworkImage.widthAnchor.constraint(equalToConstant: 150).isActive = true
     }
-
-//    func setupOnBoardingLabelConstraints() {
-//        onBoardingLabel.translatesAutoresizingMaskIntoConstraints = false
-//        onBoardingLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-//        onBoardingLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 30).isActive = true
-//        onBoardingLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8).isActive = true
-//        onBoardingLabel.bottomAnchor.constraint(equalTo: finishButton.topAnchor, constant: 30).isActive = true
-//    }
     
 }
-

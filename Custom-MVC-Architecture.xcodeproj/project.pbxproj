@@ -11,7 +11,6 @@
 		8D82BEA7266FC732002771C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D82BEA6266FC732002771C2 /* SceneDelegate.swift */; };
 		8D82BEAE266FC734002771C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D82BEAD266FC734002771C2 /* Assets.xcassets */; };
 		8D82BEB1266FC734002771C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D82BEAF266FC734002771C2 /* LaunchScreen.storyboard */; };
-		8D872AE326714F1C002F0711 /* OnBoarding.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D872AE226714F1C002F0711 /* OnBoarding.xcassets */; };
 		8D872AED267151F1002F0711 /* PlayerViewComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D872AEC267151F1002F0711 /* PlayerViewComponentView.swift */; };
 		8D872AEF2671523F002F0711 /* PlayerViewComponentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D872AEE2671523F002F0711 /* PlayerViewComponentModel.swift */; };
 		8D872AF126715259002F0711 /* PlayerViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D872AF026715259002F0711 /* PlayerViewComponent.swift */; };
@@ -27,7 +26,6 @@
 		D4905D152673B9FD009BA483 /* PreviewPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4905D142673B9FD009BA483 /* PreviewPlayerView.swift */; };
 		D4C040622670036B00387D11 /* SongModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C040612670036B00387D11 /* SongModel.swift */; };
 		D4C04064267007A800387D11 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C04063267007A800387D11 /* OnBoardingViewController.swift */; };
-		D4C0406726700CDA00387D11 /* OnBoardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0406626700CDA00387D11 /* OnBoardingModel.swift */; };
 		D4C0406926700CF300387D11 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0406826700CF300387D11 /* OnBoardingView.swift */; };
 		D4C0406B26700D0F00387D11 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0406A26700D0F00387D11 /* SearchViewController.swift */; };
 		D4C0406F26700DAD00387D11 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0406E26700DAD00387D11 /* SearchView.swift */; };
@@ -44,7 +42,6 @@
 		8D82BEAD266FC734002771C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D82BEB0266FC734002771C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D82BEB2266FC734002771C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8D872AE226714F1C002F0711 /* OnBoarding.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = OnBoarding.xcassets; sourceTree = "<group>"; };
 		8D872AEC267151F1002F0711 /* PlayerViewComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewComponentView.swift; sourceTree = "<group>"; };
 		8D872AEE2671523F002F0711 /* PlayerViewComponentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewComponentModel.swift; sourceTree = "<group>"; };
 		8D872AF026715259002F0711 /* PlayerViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewComponent.swift; sourceTree = "<group>"; };
@@ -60,7 +57,6 @@
 		D4905D142673B9FD009BA483 /* PreviewPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPlayerView.swift; sourceTree = "<group>"; };
 		D4C040612670036B00387D11 /* SongModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongModel.swift; sourceTree = "<group>"; };
 		D4C04063267007A800387D11 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
-		D4C0406626700CDA00387D11 /* OnBoardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingModel.swift; sourceTree = "<group>"; };
 		D4C0406826700CF300387D11 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		D4C0406A26700D0F00387D11 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D4C0406E26700DAD00387D11 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -134,13 +130,6 @@
 				8D872AEC267151F1002F0711 /* PlayerViewComponentView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		8D872AF6267154EA002F0711 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		8D872AF726715568002F0711 /* Models */ = {
@@ -286,10 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				D4C04063267007A800387D11 /* OnBoardingViewController.swift */,
-				D4C0405C267002FC00387D11 /* Models */,
 				D4C0405B267002F800387D11 /* Views */,
-				8D872AF6267154EA002F0711 /* Controllers */,
-				8D872AE226714F1C002F0711 /* OnBoarding.xcassets */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -300,14 +286,6 @@
 				D4C0406826700CF300387D11 /* OnBoardingView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		D4C0405C267002FC00387D11 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				D4C0406626700CDA00387D11 /* OnBoardingModel.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		D4C040702670683200387D11 /* Shared */ = {
@@ -401,7 +379,6 @@
 			files = (
 				8D82BEB1266FC734002771C2 /* LaunchScreen.storyboard in Resources */,
 				D4C040A92672697C00387D11 /* Search.xcassets in Resources */,
-				8D872AE326714F1C002F0711 /* OnBoarding.xcassets in Resources */,
 				8D82BEAE266FC734002771C2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,7 +434,6 @@
 				D4905D152673B9FD009BA483 /* PreviewPlayerView.swift in Sources */,
 				8D872AFA26715617002F0711 /* SongManager.swift in Sources */,
 				D4C040732670686500387D11 /* UIViewExtensions.swift in Sources */,
-				D4C0406726700CDA00387D11 /* OnBoardingModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

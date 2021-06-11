@@ -26,5 +26,14 @@ struct SongModel {
     let artworkUrl100: String?
     
     let primaryGenreName: String?
+    
+    init(songData: SongData) {
+        self.artistName = songData.artistName
+        self.trackName = songData.trackName
+        self.previewUrl = songData.previewUrl
+        self.collectionName = songData.collectionName
+        self.artworkUrl100 = songData.artworkUrl100
+        self.primaryGenreName = songData.primaryGenreName
+    }
 
 }
