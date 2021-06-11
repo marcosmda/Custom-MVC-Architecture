@@ -31,7 +31,7 @@ class PlayerComponentView: UIView {
     }
     
     func setupView() {
-        backgroundColor = .red
+        backgroundColor = .systemGray2
         addSubviews()
         setupAllStyles()
         setupAllConstraints()
@@ -62,8 +62,8 @@ extension PlayerComponentView {
     
     func setupBackwardButtonStyle() {
         let buttonImage = UIImage(systemName: "backward.fill")
-        forwardButton.setBackgroundImage(buttonImage, for: .normal)
-        forwardButton.tintColor = .systemPurple
+        backwardButton.setBackgroundImage(buttonImage, for: .normal)
+        backwardButton.tintColor = .systemPurple
     }
 
 }
@@ -78,6 +78,7 @@ extension PlayerComponentView {
     }
     
     func setupPlayButtonConstraints() {
+        playButton.translatesAutoresizingMaskIntoConstraints = false
         playButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         playButton.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         playButton.widthAnchor.constraint(equalToConstant: 80).isActive = true
@@ -85,13 +86,19 @@ extension PlayerComponentView {
     }
     
     func setupForwardButtonConstraints() {
+        forwardButton.translatesAutoresizingMaskIntoConstraints = false
         forwardButton.centerYAnchor.constraint(equalTo: playButton.centerYAnchor).isActive = true
         forwardButton.leadingAnchor.constraint(equalTo: playButton.trailingAnchor, constant: Constants.padding).isActive = true
+        forwardButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        forwardButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
     func setupBackwardButtonConstraints() {
+        backwardButton.translatesAutoresizingMaskIntoConstraints = false
         backwardButton.centerYAnchor.constraint(equalTo: playButton.centerYAnchor).isActive = true
-        backwardButton.trailingAnchor.constraint(equalTo: playButton.leadingAnchor, constant: Constants.padding).isActive = true
+        backwardButton.trailingAnchor.constraint(equalTo: playButton.leadingAnchor, constant: -Constants.padding).isActive = true
+        backwardButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        backwardButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
 }
